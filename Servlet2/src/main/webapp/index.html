@@ -4,38 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servlet 복습 프로젝트</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
     <h1> 강찬혁의 Servlet 복습 프로젝트 </h1>  
-    <h3> 피자 주문하기 </h3>
 
-    피자 선택 :
-    <select name="pizza">
-        <option value="치즈">치즈 피자(12000)</option>
-        <option value="페퍼로니">페퍼로니 피자(14000)</option>
-        <option value="하와이안">하와이안 피자(14000)</option>
-        <option value="불고기">불고기 피자(15000)</option>
-    </select>
+    <form action="servletPractice_01" method="get">
+        <h3> 피자 주문하기 </h3>
 
-    사이즈 선택 :
+        피자 선택 :
+        <select name="pizza">
+            <option value="치즈">치즈 피자(12000)</option>
+            <option value="페퍼로니">페퍼로니 피자(14000)</option>
+            <option value="하와이안">하와이안 피자(14000)</option>
+            <option value="불고기">불고기 피자(15000)</option>
+        </select>
 
-    미디움 <input type="radio" name="size" value="medium"> / 
-    라지 <input type="radio" name="size" value="large"> /
-    패밀리 <input type="radio" name="size" value="family">
-    
-    
-    <br>
+        
 
-    기타 옵션 선택 <br>
-    <input type="checkbox" name="opt" vlaue="콜라 사이즈 업"> 콜라 사이즈 업(+1500원) <br>
-    <input type="checkbox" name="opt" vlaue="콜라 사이즈 업"> (+1500원) <br>
-    <input type="checkbox" name="opt" vlaue="콜라 사이즈 업"> 콜라 사이즈 업(+1500원) <br>
-    <input type="checkbox" name="opt" vlaue="콜라 사이즈 업"> 콜라 사이즈 업(+1500원) <br>
-    
-    주문자명 : <input type="text" name="ordererName" size="30"><br>
-    주소     : <input type="text" name="ordererAddress" size="30"> <br>
+        <br> <br>
 
+        사이즈 선택 
+        <div class="checkSize">
+            <label for="medium">미디움 (+0원)</label><input type="radio" name="size" value="medium" id="medium" checked> / 
+            <label for="large">라지 (+5000원)</label><input type="radio" name="size" value="large" id="large"> /
+            <label for="family">패밀리 (+8000원)</label><input type="radio" name="size" value="family" id="family">
+        </div>
+        
+        <br>
+
+        기타 옵션 또는 사이드 메뉴 선택 <br>
+        <div class="etcMenu">
+            <input type="checkbox" name="opt" id="coke"value="콜라 사이즈 업"> <label for="coke">콜라 사이즈 업(+1500원)</label> <br>
+            <input type="checkbox" name="opt" id="addCheese"value="치즈추가"> <label for="addCheese">치즈추가(+2000원)</label> <br>
+            <input type="checkbox" name="opt" id="cheeseCrust"value="치즈크러스트"> <label for="cheeseCrust">치즈크러스트(+3000원)</label> <br>
+            <input type="checkbox" name="opt" id="chickenWing"value="버팔로윙"> <label for="chickenWing">버팔로윙 8조각(+8000원)</label> <br>
+        </div>
+        <br>
+
+        주문자명 : <input type="text" name="ordererName" size="30"> <br>
+        주소 : <input type="text" name="ordererAddress" size="30"> <br>
+
+        가격 : 
+        <button type="submit">주문하기</button>
+
+    </form>
 
 
 

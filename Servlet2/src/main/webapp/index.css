@@ -1,0 +1,22 @@
+* {
+    padding: 10px;
+    margin-top: 10px;
+    user-select: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.etcMenu > input {
+
+    cursor: pointer;
+
+}
+
+
+
