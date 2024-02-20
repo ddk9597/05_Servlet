@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servlet을 연습합니다</title>
+</head>
+<body>
+    
+
+        <h1>강찬혁의 Page for Servlet Practice </h1>
+
+        <h2>index.html 파일은메인 페이지 역할을 합니다.</h2>
+        확인은 web.xml
+
+        <hr>
+
+        <h1> 서버 요청 + 제출 테스트 1 </h1>
+
+        <pre>
+            - 이름, 나이를 입력 받아 server로 제출
+            -** 준비물 (선수 지식) ***
+            1. input 태그 : 값을 입력 할 수 있는 양식을 제공하는 태그
+                -> name 속성 : input 태그의 값(value)가 서버로 제출 될 때 
+                               key 역할을 하는 속성
+                -> value 속성 또는 작성된 값 : 서버로 제출되는 값을
+            
+            2. form 태그 : 내부에 작성 된 입력 값(input 태그)를 지정된 위치로 보낼 수 있게끔 하는 tag
+                지정된 경로 : 다른 html경로, 서버(Java Servlet)요청 주소
+                    -> 서버요청주소 : 개발자 임의로 설정 가능함
+
+            3. action 속성 : 제출할 경로 또는 주소를 작성하는 속성
+
+            4. method 속성 : 제출 방식을 지정하는 속성(기본 값 : Get)
+
+            
+
+        </pre>
+
+    <!-- form 태그 제출 시 내부 input에 작성 된 값을 
+    /ex1 요청을 처리하는 서버(Servlet)으로 제출(GET방식)
+    -->
+    <form action="/ex1" method="get"></form>
+
+    이름 : <input type="text" name="inputName"> <br>
+
+    나이 : <input type="number" name="inputAge"> <br>
+
+    <button type="submit">제출하기(== 서버 요청하기)</button>
+
+
+</body>
+</html>
