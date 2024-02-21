@@ -50,12 +50,8 @@ public class PracticeExampleServlit01 extends HttpServlet{
 		
 	System.out.println("[서버] /ex1 요청을 받음"); 
 	
-	System.out.println(" 전달 받은 inputName : " +inputName );
-	System.out.println(" 전달 받은 inputAge : " +inputAge );
+	System.out.println(" 전달 받은 inputName : " + inputName );
+	System.out.println(" 전달 받은 inputAge : " + inputAge );
 	}
-	
-	
-
-	
 	
 }

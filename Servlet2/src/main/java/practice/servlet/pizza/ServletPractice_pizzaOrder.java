@@ -85,7 +85,7 @@ public class ServletPractice_pizzaOrder extends HttpServlet{
 			sb.append("<body>");
 			
 				sb.append("<h3>");
-					sb.append(String.format("주문자 명 : %s", ordererName) );
+					sb.append(String.format("주문자명 : %s", ordererName) );
 				sb.append("</h3>");
 			
 				sb.append(String.format("<h3>주소 : %s</h3>", ordererAddress));
