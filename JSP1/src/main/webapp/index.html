@@ -49,20 +49,35 @@
             </tr>
         </form>
 
-
-
     </table>
+
+    <hr>
+
+    <h1>Servlet/Jsp를 이용한 페이지 이동</h1>
+    <pre>
+        방법 : form, a, Js(location.href), 주소창에 직접 작성
+
+        - 파일 경로를 작성해서 이동 하는것이 아님
+        
+        - 서버 요청 주소를 작성하여 이동해야 한다(요청하고자 하는 Servlet에 매핑된 주소를 이용해야 한다)
+            -> @WebServlet("주소"); 를 이용하라
+
+
+    <!-- 외부에 노출되면 안되는 코드(Java, Jsp)는 /WEB-INF 폴더에 저장 -->
+    </pre> <a href="/WEB-INF/views/pizza_order.jsp">이렇게 하면 안된다
+        (/WEB-INF 폴더는 주소로 접근 불가함(보안폴더))
+    </a>
+
+    <br> <br><br>
+
+    <!-- @WebServlet("/pizza/order")를 가진 Servlet 요청 -->
+    <!-- Java,XML 등 프로젝트 내부에서는 파일 경로로 접근 가능 -->
+    <a href="/pizza/order"> 피자 주문 페이지 이동 </a>
+
     
 
 
-    <!-- 
-        제출 주소 /signup
-
-        -> form태그의 action 속성 = /signup
-        -> method="GET"
-
     
-    -->
 
 </body>
 </html>

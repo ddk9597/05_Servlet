@@ -1,0 +1,38 @@
+Servlet
+
+
+
+
+
+Servlet 작성 순서
+    1. HttpServlet 상속 받기
+    
+    2. 어노테이션 작성 @WebServlet("url패턴 지정");
+        - 서블렛 클래스 등록 + 매핑
+        - web.xml 없이 서블렛 설정 가능
+        - 여러 url패턴 지정은 배열 형태로 지정 가능
+            -> ("/ex1", "/ex2", ...);
+    
+    3. doGet || doPost 오버라이딩 -> 요청 메서드에 따라 수행함
+        요청 메서드의 form 태그 내의 method속성에 지정된 값에 따라 수행함
+        doGet : 전송된 데이터가 URL에 노출됨. 보안에 취약함
+        doPost : HTTP요청의 body 태그 내에 데이터가 포함되어 전송됨.
+                 doGet 보다 더 나은 보안.
+                 주로 로그인, 회원가입 등 사용자 정보를 서버로 전송시 사용
+
+    4. 필요한 로직 처리
+        - 파라미터 얻어오기
+        - 필요한 요청 처리 구문 작성
+    
+    5. 응답형태 지정 + 응답 스트림 얻어오기
+        응답 형태 지정 : resp.setContentType("text/html; charset=utf-8");
+        응답 스트림 얻어오기 :
+            - PrintWriter out = resp.getWriter(); 
+            - JSP 페이지 사용
+    
+    6. 스트림을 통해 응답 데이터 코드 출력하기(html)
+
+
+JSP
+-> Servlet 응답 화면 만들기 유용한 tool
+Servlet -> JSP에게 요청 위임
