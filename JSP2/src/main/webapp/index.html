@@ -146,7 +146,35 @@
     resp.sendRedirect("재요청할 주소");
 </pre>  
 
-  
+    <hr><hr>
+
+    <h1> 종합문제 </h1>
+
+    <h3>List에 같은 이름의 사람이 존재하는지 확인하기</h3>
+
+    <pre>
+        - 이름을 입력 받아 "/search" (POST)요청
+        - List<String>에 입력 받은 이름이 있으면
+          "000 은 n번째 index에 존재합니다." 라는 메세지 
+          "/WEB-INF/views/practice/search_result.jsp"를 이용해서 출력
+          (forward)
+
+        - List에 입력 받은 이름이 없으면
+          "000 은 존재하지 않습니다" 라는 메세지
+          "/error"주소를 요청해서 출력하기
+          (redirect)
+        
+
+    </pre>
+
+
+    <form action="/search" method="post">
+        이름을 입력하세요 : <input type="text" name="inputName">
+        <button>검색</button>
+    </form>
+
+
+
   
   
 

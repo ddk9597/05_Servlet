@@ -24,7 +24,7 @@ public class PizzaOrderServlet extends HttpServlet{
 		// JSP로 요청 위임되는 HttpServletRequest 객체에
 		// 임의의 값을 추가하기!!
 		
-		String myName = "백동현";
+		String myName = "강찬혁";
 		
 		// Attribute(속성) == 객체의 속성 == 변수(필드)
 		req.setAttribute("myName", myName);

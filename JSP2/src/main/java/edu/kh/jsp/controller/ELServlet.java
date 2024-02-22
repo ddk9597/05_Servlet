@@ -12,7 +12,9 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/el") // 이 어노테이션으로 인해 index.html 불러올 수 있음
+@WebServlet("/el") 
+// 이 어노테이션으로 인해 index.html에 작성된 "/el"인식하여
+// 불려올 수 있음
 public class ELServlet extends HttpServlet{
 
 	// a태그 요청 == GET 방식
