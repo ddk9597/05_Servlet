@@ -28,6 +28,8 @@ public class PizzaOrderServlet extends HttpServlet{
 		
 		// Attribute(속성) == 객체의 속성 == 변수(필드)
 		req.setAttribute("myName", myName);
+		// K : V 형태로 저장됨
+		// K : 항상 String 형태, index에서 설정한 name값으로 불러와짐
 		
 		
 		

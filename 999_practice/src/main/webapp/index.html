@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElPractice</title>
+</head>
+<body>
+    내장객체, 우선순위별 정렬
+
+    1. page
+        - 현재페이지
+        - 현재 jsp에서만 사용 가능
+
+    2. request -- HttpServletRequest
+        - 요청 받은 페이지, forward 받은 페이지에서 유지되는 객체
+
+    3. session
+        - 클라이언트가 서버 접속(브라우저 사이트 들어옴)시 생성
+        - 브라우저마다 하나씩 생성됨
+        - 세션만료 / 브라우저 종료 까지 유지
+
+    4. appllication
+        - 하나의 웹 애플리케이션마다 1개만 생성됨
+        - Server 실행 시 생성, Server 종료 시 해제
+
+
+        <button>
+            <a href="/Testbutton.jsp">테스트 버튼</a>
+        </button>
+</body>
+</html>

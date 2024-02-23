@@ -16,9 +16,10 @@ import jakarta.servlet.http.HttpServletResponse;
 // 1) 현재 클래스를 Servlet 으로 등록 (서버 실행 시 자동으로 객체화 됨)
 // 2) ("주소") 와 Servlet을 매핑해서 요청/응답 처리할 수 있게 함
 
-@WebServlet("/signup")
+@WebServlet("/signup") // 현재 클래스를 Servlet으로 등록. 주소와 매핑
 public class SignupServlet extends HttpServlet{
 
+	// index form태그 내부의 method에 따라 불러오기위한 오버라이딩 다름
 	// method="GET" -> doGet()오버라이딩
 	// method="post" -> doPost()오버라이딩
 	
@@ -26,6 +27,7 @@ public class SignupServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		// 파라미터(== 전달 인자, 전달된 값)(항상 String)
+		// getParameter
 		String inputId 		= req.getParameter("inputId");
 		String inputPw		= req.getParameter("inputPw");
 		String inputPwCheck = req.getParameter("inputPwCheck");
@@ -64,6 +66,7 @@ public class SignupServlet extends HttpServlet{
 		// * RequestDispatcher 객체 * (요청 발송 객체) 
 		// - 어떤 JSP로 요청을 위임할지 지정하고 발송해주는 객체
 		// -> HttpServletRequest에 내장되어 있음
+		// --> forward 하려면 HttpServletRequest import 필요
 		
 		// 요청 위임할 JSP 경로 작성
 		// -> src.main/webapp 폴더를 기준으로 해서 파일 경로 작성

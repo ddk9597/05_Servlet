@@ -37,7 +37,6 @@ public class ExampleServlet2 extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		super.doGet(req, resp);
 		
 		// 파라미터 얻어오기
 		String chicken = req.getParameter("chicken"); // 치킨
